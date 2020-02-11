@@ -14,9 +14,11 @@ class About extends Component {
       <div id="about" className="text">
       <h2>Imagination overflow</h2>
 
-      <p>Sarah Nessa is an oil painter residing in Southern California. Her work encompasses three different series – Under the Microscope, Travel Gems, and Nature x Spirit. </p>
+      <p>Vibrant colors elucidating inner worlds. All original artwork inspired through meditative awareness and transcendental contemplation.</p>
 
-      <p>Contact her for more information.</p>
+      <p>Visual patterns between human and tiny life organisms. Echoes of primordial creation.</p>
+
+      <p>Locations seen through the lens of previous perspectives. Simplistic and sophisticated views.</p>
 
       </div>
 
