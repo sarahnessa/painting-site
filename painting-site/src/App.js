@@ -47,8 +47,6 @@ class App extends Component {
 
           </div>
 
-    
-
               <Navigation />
        
               <Switch>
@@ -66,6 +64,6 @@ class App extends Component {
 
     );
   }
-}
+};
 
 export default App;
