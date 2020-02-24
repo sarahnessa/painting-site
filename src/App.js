@@ -1,26 +1,71 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import {
+  Route,
+  HashRouter,
+  Switch
+} from "react-router-dom";
+import About from './About.js';
+import Contact from './Contact.js';
+import Science from './science.js';
+import Nature from './nature.js';
+import Travel from './travel.js';
+import Navigation from './navigation.js';
+import BurgerIcon from './BurgerIcon.js';
+import Popup from 'reactjs-popup';
+import Menu from './Menu.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+class App extends Component {
+
+  render() {
+
+    const styles = {
+        fontFamily: "Roboto, sans-serif",
+        textAlign: "center"
+      };
+
+    return (
+
+   	  <HashRouter>
+  
+          <div className="content">
+
+            <div style={styles}>
+
+              <BurgerIcon open={false} />
+              
+              <Popup
+                modal
+                overlayStyle={{ background: "rgba(255,255,255,0.98)" }}
+                trigger={open => <BurgerIcon open={open} />}
+              >
+
+                {close => <Menu close={close} />}
+
+              </Popup>
+
+
+            </div>
+
+                <Navigation />
+        
+                <Switch>
+                  <Route path='/About.js' component={About}/>
+                  <Route path='/Contact.js' component={Contact} />
+                  <Route exact path='/' component={Nature}/>
+                  <Route exact path='/nature.js' component={Nature}/>
+                  <Route path='/science.js' component={Science} />
+                  <Route path='/travel.js' component={Travel}/>
+                </Switch>
+              
+         </div>
+
+      </HashRouter>
+
+
+    );
+  }
+};
 
 export default App;
