@@ -1,13 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700');
 
-
-
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
 
 body {
   margin: 0;
@@ -117,47 +114,8 @@ ul {
   padding-top: 40px;
 }
 
-.lightbox-img-thumbnail {
-  position: relative;
-  float: left;
-  display: inline-block;
-  width: 380px;
-  height: 380px;
-  margin: 10px 2.5% 60px 0;
-  object-fit: cover !important;
-}
 
-.lightbox-img-thumbnail:nth-child(3n+3) {
-  margin-right: 0 !important;
-}
-
-.lightbox-title {
-  font-family: 'Roboto', sans-serif;
-  color: #cccccc !important;
-  text-transform: uppercase;
-  letter-spacing: .06em;;
-  font-size: 1.2em;
-}
-
-.lightbox-description {
-  font-style: italic;
-  color: #686868;
-  font-weight: 300;
-  font-family: 'Roboto', sans-serif;
-}
-
-.lightbox-img-thumbnail:hover {
-  opacity: .7;
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-  filter: alpha(opacity=70);
-  zoom: 1;
-  transition: opacity 1s;
-  -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -o-transition: opacity 1s;
-}
-
-
+/* About Page */
 #about, .aboutImg, #imgContainer {
   display: inline-block;
 }
@@ -172,7 +130,7 @@ ul {
 }
  
 #about {
-  width: 50%;
+  width: 60%;
 }
 
 #about-container {
@@ -183,7 +141,7 @@ ul {
   vertical-align: top;
 }
 
-#about h2, .contact-h2 {
+#about h2, .form h2 {
   text-transform: uppercase;
   color: #404040;
   font-size: 1.4em;
@@ -204,6 +162,12 @@ ul {
   margin-top: 0;
 }
 
+#about p, #about h2 {
+  text-align: left;
+}
+
+
+/* Responsive Menu */
 .burger-menu,
 .burger-menu.open {
   cursor: pointer;
@@ -253,7 +217,7 @@ ul {
   text-decoration: none;
   font-family: 'Roboto', arial, sans-serif;
   text-transform: uppercase;
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 3.4em;
   color: #555555;
 }
@@ -264,7 +228,6 @@ ul {
 
 
 /* Contact Form */
-
 .form {
   max-width: 420px;
   margin: 0 auto;
@@ -318,56 +281,12 @@ input[type=submit]:hover {
   font-weight: bold;
 }
 
-
-@media (min-width: 768px) {
-
-  .lightbox-img-thumbnail:hover {
-    box-shadow: none !important;
-  }
-
-}
-
-
-@media only screen and (max-width: 1350px) {
-  .imgWrapper {
-    width: 100%;
-  }
-
-  .lightbox-img-thumbnail {
-    margin: 10px 2% 60px;
-    width: 30% !important;
-  }
- 
-}
-
-@media only screen and (max-width:1120px) {
-  
-  
-  
-}
-
+/* Media Queries */
 @media only screen and (max-width: 920px) {
-
-
-  .lightbox-img-thumbnail {
-    display: block;
-    margin: 10px auto 60px;
-    float: none;
-    width:100% !important;
-  }
-
-  .lightbox-img-thumbnail:nth-child(3n+3) {
-    margin-right: auto !important;
-  }
-
-  .AppMenu li a {
-    font-size: 0.7em;
-  }
 
   .PaintingMenu li a {
     letter-spacing: 0.1em;
-    font-size: 0.6em;
-
+    font-size: 0.9em;
   }
 
   .PaintingMenu li {
@@ -377,7 +296,6 @@ input[type=submit]:hover {
   .PaintingMenu ul {
     text-align: center;
   }
-
 }
 
 @media only screen and (max-width: 800px) {
@@ -402,15 +320,9 @@ input[type=submit]:hover {
     margin: 0 auto;
     display: block;
   }
-
 }
 
 @media only screen and (max-width: 600px) {
-
-  .lightbox-img-thumbnail {
-    width: 95% !important;
-  }
-
   .PaintingMenu {
     margin-top: 40px;
   }
@@ -421,9 +333,8 @@ input[type=submit]:hover {
   }
 
   .PaintingMenu li a {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
-
 }
 
 @media only screen and (max-width: 480px) {
@@ -432,7 +343,7 @@ input[type=submit]:hover {
     padding-left: 0;
   }
 
-  .contact-h2 {
+  .form h2 {
     margin-top: 60px;
   }
 
@@ -444,13 +355,8 @@ input[type=submit]:hover {
  .menu ul li a {
     font-size: 1.8em !important;
   }
-  #gform input {
-    width: 88%;
-  }
   body {
     padding: 10px;
     margin: 0 auto;
   }
-
-
 }
