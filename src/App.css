@@ -262,6 +262,10 @@ input[type=submit]:hover {
     background-color: #06999c;
 }
 
+input:focus {
+  outline: #00CED1 auto 3px !important;
+}
+
 .container {
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -334,6 +338,9 @@ input[type=submit]:hover {
 
   .PaintingMenu li a {
     font-size: 0.9em;
+  }
+  .gallery, .form {
+    padding-top: 40px;
   }
 }
 
