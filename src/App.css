@@ -262,7 +262,7 @@ input[type=submit]:hover {
     background-color: #06999c;
 }
 
-input:focus {
+input:focus, textarea:focus {
   outline: #00CED1 auto 3px !important;
 }
 
@@ -340,7 +340,7 @@ input:focus {
     font-size: 0.9em;
   }
   .gallery, .form {
-    padding-top: 40px;
+    margin-top: 40px;
   }
 }
 

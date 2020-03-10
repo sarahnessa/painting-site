@@ -56,7 +56,7 @@ class Form extends React.Component {
                         <label>{field.label}</label>
                         <input
                           type={field.type}
-                          className={field.klassName}
+                          className={field.fieldName}
                           placeholder={field.placeholder}
                           value={field.name}
                           onChange={e => this.handleChange(e, field.fieldName)}
@@ -65,7 +65,7 @@ class Form extends React.Component {
                     ) : (
                       <React.Fragment>
                         <label>{field.label}</label>
-                        <textarea className={field.klassName} placeholder={field.placeholder} onChange={e => this.handleChange(e, field.fieldName)} value={field.name} />
+                        <textarea className={field.fieldName} placeholder={field.placeholder} onChange={e => this.handleChange(e, field.fieldName)} value={field.name} />
                       </React.Fragment>
                     )}
                   </React.Fragment>
