@@ -18,15 +18,25 @@ class Travel extends Component {
       const settings = {
         columnCount:{
           default:2,
-          mobile:1
+          mobile:1,
+          tab:1
         },
         mode: 'dark'
       }
 
+    if (!travel_images) {
+      return (
+        <div className="ui segment">
+          <div className="ui active loader"></div>
+        </div>
+      );
+    }
+  
+
     return (
-      <div>
+        <div className="gallery-container">
           <div className="gallery">
-        
+
               <Lightroom 
                 images={travel_images}
                 settings={settings}

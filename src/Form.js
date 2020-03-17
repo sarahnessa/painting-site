@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import axios from "axios";
 
-class Form extends React.Component {
+class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +15,7 @@ class Form extends React.Component {
     e.preventDefault();
     axios({
       method: "post",
-      url: '../api/contact/index.php',
+      url: '/api/contact/index.php',
       headers: { "content-type": "application/json" },
       data: this.state
     })
@@ -43,7 +43,7 @@ class Form extends React.Component {
   render() {
     const { title, successMessage, errorMessage, fieldsConfig } = this.props.config;
     return (
-      <div className="form">
+      <div className="contact-form">
         <h2>{title}</h2>
         <div>
           <form action="#">
@@ -56,7 +56,7 @@ class Form extends React.Component {
                         <label>{field.label}</label>
                         <input
                           type={field.type}
-                          className={field.fieldName}
+                          className={field.fieldNameClass}
                           placeholder={field.placeholder}
                           value={field.name}
                           onChange={e => this.handleChange(e, field.fieldName)}
@@ -65,7 +65,7 @@ class Form extends React.Component {
                     ) : (
                       <React.Fragment>
                         <label>{field.label}</label>
-                        <textarea className={field.fieldName} placeholder={field.placeholder} onChange={e => this.handleChange(e, field.fieldName)} value={field.name} />
+                        <textarea className={field.fieldNameClass} placeholder={field.placeholder} onChange={e => this.handleChange(e, field.fieldName)} value={field.name} />
                       </React.Fragment>
                     )}
                   </React.Fragment>

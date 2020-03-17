@@ -6,6 +6,21 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
 body {
   margin: 0;
   padding: 75px;
@@ -13,6 +28,11 @@ body {
   margin: 0 auto;
   display: block;
   color: #1a1a1a;
+}
+
+.container {
+  background-color: #ffffff !important;
+  padding: 0 !important;
 }
 
 .content {
@@ -83,7 +103,7 @@ ul {
 .PaintingMenu ul {
   margin: 0 auto;
   display: block;
-  max-width: 700px;
+  max-width: 810px;
   vertical-align: bottom;
 }
 
@@ -96,7 +116,7 @@ ul {
   text-decoration: none;
   color: #A8A8A8;
   text-transform: uppercase;
-  font-size: 0.7em;
+  font-size: 1.0em;
   font-weight: 300;
   letter-spacing: 0.2em;
 }
@@ -111,7 +131,10 @@ ul {
   margin: 0 auto;
   position: relative;
   width: 100%;
-  padding-top: 40px;
+}
+
+.gallery-container, #about-container, .contact-form {
+  padding-top: 60px;
 }
 
 
@@ -133,15 +156,12 @@ ul {
   width: 60%;
 }
 
-#about-container {
-  padding-top: 40px;
-}
 #about {
   padding: 0 20px 20px 40px;
   vertical-align: top;
 }
 
-#about h2, .form h2 {
+#about h2, .contact-form h2 {
   text-transform: uppercase;
   color: #404040;
   font-size: 1.4em;
@@ -228,11 +248,11 @@ ul {
 
 
 /* Contact Form */
-.form {
+.contact-form {
   max-width: 420px;
   margin: 0 auto;
-  padding-top: 40px;
 }
+
 p {
   text-align: center;
   font-weight: 500;
@@ -266,21 +286,16 @@ input:focus, textarea:focus {
   outline: #00CED1 auto 3px !important;
 }
 
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
 .success  {
   margin: 20px 0;
-  border: 1px solid green;
+  border: 1px solid #82E0AA;
   padding: 7px;
   font-weight: bold;
 }
 
 .error {
   margin: 20px 0;
-  border: 1px solid red;
+  border: 1px solid #E74C3C;
   padding: 7px;
   font-weight: bold;
 }
@@ -333,14 +348,11 @@ input:focus, textarea:focus {
 
   .PaintingMenu li {
     display: block;
-    padding: 5px;
+    padding: 8px;
   }
 
   .PaintingMenu li a {
     font-size: 0.9em;
-  }
-  .gallery, .form {
-    margin-top: 40px;
   }
 }
 
@@ -350,7 +362,7 @@ input:focus, textarea:focus {
     padding-left: 0;
   }
 
-  .form h2 {
+  .contact-form h2 {
     margin-top: 60px;
   }
 

@@ -43,14 +43,21 @@ class Science extends Component {
       columnCount:{
         default:2,
         mobile:1,
-        tab:4
+        tab:2
       },
       mode: 'dark'
     }
 
+    if (!science_images) {
+      return (
+          <div className="ui segment">
+            <div className="ui active loader"></div>
+          </div>
+        );
+    }
+
     return (
-      <div>
-    
+      <div className="gallery-container">
         <div className="gallery">
 
           <Lightroom
@@ -59,7 +66,6 @@ class Science extends Component {
           />
 
         </div>
-        
       </div>
 
     );
