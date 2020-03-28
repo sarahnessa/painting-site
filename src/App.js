@@ -21,7 +21,7 @@ class App extends Component {
 
     return (
 
-   	  <HashRouter>
+        <HashRouter>
   
           <div className="content">
 
@@ -52,8 +52,7 @@ class App extends Component {
               
          </div>
 
-      </HashRouter>
-
+         </HashRouter>
 
     );
   }
