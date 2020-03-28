@@ -22,7 +22,7 @@
 
 body {
   margin: 0;
-  padding: 75px !important;
+  padding: 7% !important;
   max-width: 1600px;
   margin: 0 auto;
   display: block;
@@ -39,7 +39,7 @@ body {
 }
 
 ul {
-  padding-left: 0;
+  padding: 0;
 }
 
 .AppHeader {
@@ -87,7 +87,7 @@ ul {
   text-decoration: none;
   color: #A8A8A8;
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: 1.0em;
   font-weight: 300;
   letter-spacing: 0.11em;
 }
@@ -120,7 +120,7 @@ ul {
   text-decoration: none;
   color: #A8A8A8;
   text-transform: uppercase;
-  font-size: 1.0em;
+  font-size: 1.1em;
   font-weight: 300;
   letter-spacing: 0.2em;
 }
@@ -155,20 +155,19 @@ ul {
 #imgContainer {
   width: 27%;
 }
- 
-#about {
-  width: 60%;
-}
+
 
 #about {
   padding: 0 20px 20px 40px;
   vertical-align: top;
+  width: 60%;
 }
 
 #about h2, .contact-form h2 {
   text-transform: uppercase;
   color: #404040;
   font-size: 1.4em;
+  margin-bottom: 30px;
 }
 
 .link {
@@ -179,7 +178,7 @@ ul {
   color: #656567;
   font-weight: 100;
   line-height: 1.4em;
-  font-size: .9em;
+  font-size: 1.0em;
 }
 
 #about h2 {
@@ -316,6 +315,7 @@ input:focus, textarea:focus {
 .instagram-image img {
   width: 100%%;
 }
+
 /* Media Queries */
 @media only screen and (max-width: 920px) {
 
@@ -334,9 +334,6 @@ input:focus, textarea:focus {
 }
 
 @media only screen and (max-width: 800px) {
-  body {
-    padding: 35px !important;
-  }
   .burger-menu,
   .burger-menu.open {
     display: inline-block;
@@ -391,7 +388,6 @@ input:focus, textarea:focus {
     font-size: 1.8em !important;
   }
   body {
-    padding: 10px;
     margin: 0 auto;
   }
 }
