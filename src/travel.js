@@ -44,7 +44,6 @@ class Travel extends Component {
 
           </div>
       </div>
-
     );
   }
 };

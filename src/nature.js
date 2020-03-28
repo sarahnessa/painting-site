@@ -60,7 +60,6 @@ class Nature extends Component {
 
         </div> 
       </div>
-
     );
   }
 };

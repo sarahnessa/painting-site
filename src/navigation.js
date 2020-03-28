@@ -11,7 +11,7 @@ class Navigation extends Component {
         <div>
           <nav className="AppHeader">
 
-              <h1 className="AppTitle">Sarah Nessa</h1>
+              <h1 className="AppTitle"><a href="/">Sarah Nessa</a></h1>
 
               <nav className="AppMenu">
                 <ul>

@@ -67,7 +67,6 @@ class Science extends Component {
 
         </div>
       </div>
-
     );
   }
 };

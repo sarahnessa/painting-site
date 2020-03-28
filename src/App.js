@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import {
   Route,
   HashRouter,
@@ -20,18 +19,13 @@ class App extends Component {
 
   render() {
 
-    const styles = {
-        fontFamily: "Roboto, sans-serif",
-        textAlign: "center"
-      };
-
     return (
 
    	  <HashRouter>
   
           <div className="content">
 
-            <div style={styles}>
+            <div>
 
               <BurgerIcon open={false} />
               
