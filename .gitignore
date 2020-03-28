@@ -18,7 +18,6 @@
 .env.test.local
 .env.production.local
 /api/instagram.js
-Contact-ig.js
 
 npm-debug.log*
 yarn-debug.log*
