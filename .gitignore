@@ -19,6 +19,7 @@
 .env.production.local
 instagram.js
 Contact.js
+/img
 
 npm-debug.log*
 yarn-debug.log*

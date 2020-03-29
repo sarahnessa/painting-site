@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Lightroom from 'react-lightbox-gallery';
-import './img/joshua-tree.jpg';
+import joshuatree from './img/joshua-tree.jpg';
 
 class Travel extends Component { 
   render() {
@@ -8,7 +8,7 @@ class Travel extends Component {
     const travel_images = [
   
         {
-          src: '/static/media/joshua-tree.25383b5d.jpg',
+          src: joshuatree,
           desc: 'Beyond the Joshua Tree',
           sub: 'Oil on Canvas - 40" x 30"'
         }
@@ -24,13 +24,17 @@ class Travel extends Component {
         mode: 'dark'
       }
 
-    if (!travel_images) {
-      return (
-        <div className="ui segment">
-          <div className="ui active loader"></div>
-        </div>
-      );
-    }
+      if (travel_images.length === 0) {
+        return (
+          <div class="loader-container">
+              <div class="segment">
+                <div class="ui active dimmer">
+                  <div class="ui medium text loader">Loading</div>
+                </div>
+              </div>
+          </div>
+        );
+      }
   
 
     return (

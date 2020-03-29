@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import Lightroom from 'react-lightbox-gallery';
-import './img/pollen.jpg';
-import './img/neuron.jpg';
-import './img/mitosis.jpg';
-import './img/ecoli.jpg';
-import './img/hiv.jpg';
-import './img/prokaryote.jpg';
+import pollen from './img/pollen.jpg';
+import neuron from './img/neuron.jpg';
+import mitosis from './img/mitosis.jpg';
+import ecoli from './img/ecoli.jpg';
+import prokaryote from './img/prokaryote.jpg';
 
 class Science extends Component {
   render() {
@@ -13,27 +12,27 @@ class Science extends Component {
     const science_images = 
         [
           {
-            src: '/static/media/pollen.3b49b120.jpg',
+            src: pollen,
             desc: 'Pollen - The Seed of Reproduction',
             sub: 'Oil on Canvas - 36" x 36"'
           },
           {
-            src: '/static/media/neuron.c1887243.jpg',
+            src: neuron,
             desc: 'Endorphin Neuron - Feel Good Brain Power',
             sub: 'Oil on Canvas - 30" x 24"'
           },
           {
-            src: '/static/media/mitosis.c19fa0ea.jpg',
+            src: mitosis,
             desc: 'Mitosis - Cellular Reproduction',
             sub: 'Oil on Canvas - 36" x 18"'
           },
           {
-            src: '/static/media/ecoli.79595571.jpg',
+            src: ecoli,
             desc: 'E. coli - Friendly/Unfriendly Bacteria',
             sub: 'Oil on Canvas - 30" x 30"'
           },
           {
-            src: '/static/media/prokaryote.b5e674f6.jpg',
+            src: prokaryote,
             desc: 'Prokaryote - Primitive Creatures',
             sub: 'Oil on Canvas - 36" x 15"'
           }
@@ -48,12 +47,16 @@ class Science extends Component {
       mode: 'dark'
     }
 
-    if (!science_images) {
+    if (science_images.length === 0) {
       return (
-          <div className="ui segment">
-            <div className="ui active loader"></div>
-          </div>
-        );
+        <div class="loader-container">
+            <div class="segment">
+              <div class="ui active dimmer">
+                <div class="ui medium text loader">Loading</div>
+               </div>
+            </div>
+        </div>
+      );
     }
 
     return (

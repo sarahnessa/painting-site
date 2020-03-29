@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Lightroom from 'react-lightbox-gallery';
-import './img/sakura.jpg';
-import './img/succulent.jpg';
-import './img/gingko.jpg';
-import './img/cacti.jpg';
+import sakura from './img/sakura.jpg';
+import succulent from './img/succulent.jpg';
+import gingko from './img/gingko.jpg';
+import cacti from './img/cacti.jpg';
 
 class Nature extends Component {
   render() {
@@ -11,22 +11,22 @@ class Nature extends Component {
     const nature_images = 
       [
         {
-          src: '/static/media/cacti.ad23d235.jpg',
+          src: cacti,
           desc: 'The Lucid Ones',
           sub: 'Oil on Canvas - 36" x 60"'
         },
         {
-          src: '/static/media/sakura.c16b779f.jpg',
+          src: sakura,
           desc: 'Reaching Out to Sakura',
           sub: 'Oil on Canvas - 36" x 60"'
         },
         {
-          src: '/static/media/succulent.119232b1.jpg',
+          src: succulent,
           desc: 'Amplification Succulents',
           sub: 'Oil on Canvas - 36" x 60"'
         },
         {
-          src: '/static/media/gingko.472c5cb8.jpg',
+          src: gingko,
           desc: 'Looking for Light Gingko',
           sub: 'Oil on Canvas - 36" x 60"'
         }
@@ -41,13 +41,17 @@ class Nature extends Component {
         mode: 'dark'
       }
 
-    if (!nature_images) {
+      if (nature_images.length === 0) {
         return (
-          <div className="ui segment">
-            <div className="ui active loader"></div>
-          </div>
+          <div class="loader-container">
+              <div class="segment">
+                <div class="ui active dimmer">
+                  <div class="ui medium text loader">Loading</div>
+                </div>
+              </div>
+            </div>
         );
-    }
+      }
 
     return (
     	<div className="gallery-container">

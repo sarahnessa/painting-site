@@ -34,6 +34,11 @@ body {
   padding: 0 !important;
 }
 
+.loader-container, .loader-container .segment, .loader-container .segment .active {
+  height: 100vh;
+  width: 100vw;
+}
+
 .content {
   width: 100%;
 }
@@ -232,10 +237,17 @@ ul {
   border: 0 !important;
   padding: 20px !important;
 }
+
+.menu {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .menu ul {
   list-style-type: none;
   padding-left: 0;
 }
+
 .menu ul li a {
   text-decoration: none;
   font-family: 'Roboto', arial, sans-serif;
@@ -243,6 +255,7 @@ ul {
   font-size: 2.5em;
   line-height: 3.4em;
   color: #555555;
+  text-align: center;
 }
 
 .menu ul li a:hover {
@@ -279,6 +292,7 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 input[type=submit]:hover {
@@ -304,16 +318,41 @@ input:focus, textarea:focus {
 }
 
 /* Instagram */ 
+
+.instagram-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: stretch; 
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 80px;
+}
+
 .instagram-row {
-  margin-left: 60px;
+
 }
 
 .instagram-image {
-  object-fit: cover;
+  flex-basis: 33%;
+  flex-grow: 0;
+  padding: 10px;
+}
+
+.instagram-image:last-child {
+
 }
 
 .instagram-image img {
-  width: 100%%;
+  width: 100%;
+}
+
+.instagram-image:hover, .gallery img:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=84)";
+  filter: alpha(opacity=84);
+  -moz-opacity: 0.84;
+  -khtml-opacity: 0.84;
+  opacity: 0.84;
 }
 
 /* Media Queries */
@@ -333,6 +372,11 @@ input:focus, textarea:focus {
   }
 }
 
+@media only screen and (max-width: 880px) {
+  .instagram-image {
+    width: 300px !important;
+  }
+}
 @media only screen and (max-width: 800px) {
   .burger-menu,
   .burger-menu.open {
@@ -366,6 +410,10 @@ input:focus, textarea:focus {
 
   .PaintingMenu li a {
     font-size: 0.9em;
+  }
+
+  .instagram-image {
+    padding: 5px;
   }
 }
 
