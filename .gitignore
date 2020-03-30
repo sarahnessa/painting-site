@@ -17,9 +17,12 @@
 .env.development.local
 .env.test.local
 .env.production.local
+painting.code-workspace
+package-lock.json
 instagram.js
 Contact.js
 /img
+yarn.lock
 
 npm-debug.log*
 yarn-debug.log*
