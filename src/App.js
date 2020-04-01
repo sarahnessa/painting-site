@@ -39,16 +39,16 @@ class App extends Component {
 
             </div>
 
-                <Navigation />
+            <Navigation />
         
-                <Switch>
-                  <Route path='/About.js' component={About}/>
-                  <Route path='/Contact.js' component={Contact} />
-                  <Route exact path='/' component={Nature}/>
-                  <Route exact path='/nature.js' component={Nature}/>
-                  <Route path='/science.js' component={Science} />
-                  <Route path='/travel.js' component={Travel}/>
-                </Switch>
+            <Switch>
+              <Route path='/About.js' component={About}/>
+              <Route path='/Contact.js' component={Contact} />
+              <Route exact path='/' component={Nature}/>
+              <Route exact path='/nature.js' component={Nature}/>
+              <Route path='/science.js' component={Science} />
+              <Route path='/travel.js' component={Travel}/>
+            </Switch>
               
          </div>
 

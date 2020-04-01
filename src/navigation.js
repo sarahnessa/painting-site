@@ -9,11 +9,11 @@ class Navigation extends Component {
       
       return (
         <div>
-          <nav className="AppHeader">
+          <nav className="app-header">
 
-              <h1 className="AppTitle"><a href="/">Sarah Nessa</a></h1>
+              <h1 className="app-title"><a href="/">Sarah Nessa</a></h1>
 
-              <nav className="AppMenu">
+              <nav className="app-menu">
                 <ul>
                   <li><NavLink exact to='/'>Paintings</NavLink></li>
                   <li><NavLink to='/about.js'>About</NavLink></li>
@@ -21,7 +21,7 @@ class Navigation extends Component {
                 </ul>
               </nav>
               
-              <nav className="PaintingMenu">
+              <nav className="painting-menu">
                 <ul>
                   <li><NavLink className="seriesLink" exact to='/'>Nature x Spirit</NavLink></li>
                   <li><NavLink className="seriesLink" to='/science.js'>Under the Microscope</NavLink></li>

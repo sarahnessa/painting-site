@@ -47,12 +47,12 @@ ul {
   padding: 0;
 }
 
-.AppHeader {
+.app-header {
   height: 150px;
   color: #1a1a1a;
 }
 
-.AppTitle {
+.app-title {
   font-size: 2.4em;
   text-transform: uppercase;
   display: inline-block;
@@ -62,33 +62,32 @@ ul {
   color: #2f363d;
 }
 
-.AppTitle a, .AppTitle a:hover {
+.app-title a, .app-title a:hover {
   text-decoration: none;
   color:  #2f363d;
 }
 
-.AppMenu {
+.app-menu {
   display: inline-block;
    float: right;
    vertical-align: middle;
    padding: 20px 0;
 }
 
-.AppMenu ul, .PaintingMenu ul {
+.app-menu ul, .painting-menu ul {
     list-style-type: none;
-  }
-
-.AppMenu li {
-  display: inline;
-  padding: 10px 25px;
- 
 }
 
-.AppMenu li:last-of-type {
+.app-menu li {
+  display: inline;
+  padding: 10px 25px;
+}
+
+.app-menu li:last-of-type {
   padding-right: 0px;
 }
 
-.AppMenu li a {
+.app-menu li a {
   text-decoration: none;
   color: #A8A8A8;
   text-transform: uppercase;
@@ -97,11 +96,11 @@ ul {
   letter-spacing: 0.11em;
 }
 
-.AppMenu li a.active {
+.app-menu li a.active {
   color: #00CED1;
 }
 
-.PaintingMenu {
+.painting-menu {
   display: block;
   vertical-align: bottom;
   position: relative;
@@ -109,19 +108,19 @@ ul {
   z-index: 9;
 }
 
-.PaintingMenu ul {
+.painting-menu ul {
   margin: 0 auto;
   display: block;
   max-width: 810px;
   vertical-align: bottom;
 }
 
-.PaintingMenu li {
+.painting-menu li {
   display: inline;
   padding: 10px 40px;
 }
 
-.PaintingMenu li a {
+.painting-menu li a {
   text-decoration: none;
   color: #A8A8A8;
   text-transform: uppercase;
@@ -130,10 +129,9 @@ ul {
   letter-spacing: 0.2em;
 }
 
-.PaintingMenu li a.active {
+.painting-menu li a.active {
   color: #00CED1;
 }
-
 
 .gallery {
   display: inline-block;
@@ -146,21 +144,19 @@ ul {
   padding-top: 60px;
 }
 
-
 /* About Page */
-#about, .aboutImg, #imgContainer {
+#about, .about-img, #img-container {
   display: inline-block;
 }
 
-.aboutImg {
+.about-img {
   width: 260px;
   width: 100%;
 }
 
-#imgContainer {
+#img-container {
   width: 27%;
 }
-
 
 #about {
   padding: 0 20px 20px 40px;
@@ -193,7 +189,6 @@ ul {
 #about p, #about h2 {
   text-align: left;
 }
-
 
 /* Responsive Menu */
 .burger-menu,
@@ -262,7 +257,6 @@ ul {
   cursor: pointer;
 }
 
-
 /* Contact Form */
 .contact-form {
   max-width: 420px;
@@ -318,7 +312,6 @@ input:focus, textarea:focus {
 }
 
 /* Instagram */ 
-
 .instagram-container {
   display: flex;
   flex-flow: row wrap;
@@ -327,10 +320,6 @@ input:focus, textarea:focus {
   justify-content: flex-start;
   width: 100%;
   margin-top: 80px;
-}
-
-.instagram-row {
-
 }
 
 .instagram-image {
@@ -357,17 +346,16 @@ input:focus, textarea:focus {
 
 /* Media Queries */
 @media only screen and (max-width: 920px) {
-
-  .PaintingMenu li a {
+  .painting-menu li a {
     letter-spacing: 0.1em;
     font-size: 0.9em;
   }
 
-  .PaintingMenu li {
+  .painting-menu li {
     padding: 10px;
   }
 
-  .PaintingMenu ul {
+  .painting-menu ul {
     text-align: center;
   }
 }
@@ -382,14 +370,16 @@ input:focus, textarea:focus {
   .burger-menu.open {
     display: inline-block;
   }
-  .AppMenu {
+
+  .app-menu {
     display: none;
   }
   
-  #imgContainer {
+  #img-container {
     display: none;
   }
-   #about {
+
+  #about {
     padding-top: 40px;
     padding-left: 0;
     width: 70%;
@@ -399,16 +389,16 @@ input:focus, textarea:focus {
 }
 
 @media only screen and (max-width: 600px) {
-  .PaintingMenu {
+  .painting-menu {
     margin-top: 40px;
   }
 
-  .PaintingMenu li {
+  .painting-menu li {
     display: block;
     padding: 8px;
   }
 
-  .PaintingMenu li a {
+  .painting-menu li a {
     font-size: 0.9em;
   }
 
@@ -427,7 +417,7 @@ input:focus, textarea:focus {
     margin-top: 60px;
   }
 
-  .AppTitle {
+  .app-title {
     font-size: 1.6em;
     padding-top: 4px;
   }
@@ -435,6 +425,7 @@ input:focus, textarea:focus {
  .menu ul li a {
     font-size: 1.8em !important;
   }
+
   body {
     margin: 0 auto;
   }
