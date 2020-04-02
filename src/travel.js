@@ -10,7 +10,8 @@ class Travel extends Component {
         {
           src: joshuatree,
           desc: 'Beyond the Joshua Tree',
-          sub: 'Oil on Canvas - 40" x 30"'
+          sub: 'Oil on Canvas - 40" x 30"',
+          key: 1
         }
     
       ];
@@ -19,23 +20,10 @@ class Travel extends Component {
         columnCount:{
           default:2,
           mobile:1,
-          tab:1
+          tabIndex:1
         },
         mode: 'dark'
       }
-
-      if (travel_images.length === 0) {
-        return (
-          <div class="loader-container">
-              <div class="segment">
-                <div class="ui active dimmer">
-                  <div class="ui medium text loader">Loading</div>
-                </div>
-              </div>
-          </div>
-        );
-      }
-  
 
     return (
         <div className="gallery-container">

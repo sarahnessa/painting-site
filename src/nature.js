@@ -13,22 +13,26 @@ class Nature extends Component {
         {
           src: cacti,
           desc: 'The Lucid Ones',
-          sub: 'Oil on Canvas - 36" x 60"'
+          sub: 'Oil on Canvas - 36" x 60"',
+          key: 1
         },
         {
           src: sakura,
           desc: 'Reaching Out to Sakura',
-          sub: 'Oil on Canvas - 36" x 60"'
+          sub: 'Oil on Canvas - 36" x 60"',
+          key: 2
         },
         {
           src: succulent,
           desc: 'Amplification Succulents',
-          sub: 'Oil on Canvas - 36" x 60"'
+          sub: 'Oil on Canvas - 36" x 60"',
+          key: 3
         },
         {
           src: gingko,
           desc: 'Looking for Light Gingko',
-          sub: 'Oil on Canvas - 36" x 60"'
+          sub: 'Oil on Canvas - 36" x 60"',
+          key: 4
         }
       ];
       
@@ -36,21 +40,9 @@ class Nature extends Component {
         columnCount:{
           default:2,
           mobile:1,
-          tab:2
+          tabIndex:2
         },
         mode: 'dark'
-      }
-
-      if (nature_images.length === 0) {
-        return (
-          <div class="loader-container">
-              <div class="segment">
-                <div class="ui active dimmer">
-                  <div class="ui medium text loader">Loading</div>
-                </div>
-              </div>
-            </div>
-        );
       }
 
     return (
