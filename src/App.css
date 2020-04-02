@@ -145,11 +145,11 @@ ul {
 }
 
 .gallery img:hover {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=84)";
-  filter: alpha(opacity=84);
-  -moz-opacity: 0.84;
-  -khtml-opacity: 0.84;
-  opacity: 0.84;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=94)";
+  filter: alpha(opacity=94);
+  -moz-opacity: 0.94;
+  -khtml-opacity: 0.94;
+  opacity: 0.94;
 }
 
 /* About Page */
@@ -223,6 +223,9 @@ ul {
 }
 
 .burger-menu.open .bar1 {
+  -moz-transform: rotate(-45deg) translate(-4px, 4px);
+  -ms-transform: rotate(-45deg) translate(-4px, 4px);
+  -o-transform: rotate(-45deg) translate(-4px, 4px);
   -webkit-transform: rotate(-45deg) translate(-4px, 4px);
   transform: rotate(-45deg) translate(-4px, 4px);
 }
@@ -232,6 +235,9 @@ ul {
 }
 
 .burger-menu.open .bar3 {
+  -moz-transform: rotate(45deg) translate(-6px, -6px);
+  -ms-transform: rotate(45deg) translate(-6px, -6px);
+  -o-transform: rotate(45deg) translate(-6px, -6px);
   -webkit-transform: rotate(45deg) translate(-6px, -6px);
   transform: rotate(45deg) translate(-6px, -6px);
 }
