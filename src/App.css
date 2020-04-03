@@ -140,16 +140,21 @@ ul {
   width: 100%;
 }
 
-.gallery-container, #about-container, .contact-form {
+.gallery-container, #about-container, .contact-container {
   padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.gallery img {
+  transition: opacity 0.5s;
 }
 
 .gallery img:hover {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=94)";
-  filter: alpha(opacity=94);
-  -moz-opacity: 0.94;
-  -khtml-opacity: 0.94;
-  opacity: 0.94;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+  filter: alpha(opacity=85);
+  -moz-opacity: 0.85;
+  -khtml-opacity: 0.85;
+  opacity: 0.85;
 }
 
 /* About Page */
