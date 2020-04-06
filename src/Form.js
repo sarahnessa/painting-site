@@ -59,6 +59,7 @@ class Form extends Component {
                           className={field.fieldNameClass}
                           placeholder={field.placeholder}
                           value={field.name}
+                          name={field.name}
                           onChange={e => this.handleChange(e, field.fieldName)}
                         />
                       </React.Fragment>
