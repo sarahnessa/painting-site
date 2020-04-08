@@ -34,7 +34,7 @@ class Form extends Component {
       message: this.state.message
     }
 
-    axios.post('API_URI', data)
+    axios.post('/api/form-server.js', data)
     .then(res => {
       this.setState({ sent: true }, this.resetForm())
     })
