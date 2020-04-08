@@ -282,11 +282,6 @@ ul {
   margin: 0 auto;
 }
 
-p {
-  text-align: center;
-  font-weight: 500;
-}
-
 input[type=text],input[type=email], select, textarea {
     width: 100%;
     padding: 12px;
@@ -298,7 +293,7 @@ input[type=text],input[type=email], select, textarea {
     resize: vertical;
 }
 
-input[type=submit] {
+.button-container button {
     background-color: #00CED1;
     color: white;
     padding: 12px 20px;

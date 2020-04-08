@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
 import Lightroom from 'react-lightbox-gallery';
-import joshuatree from './img/joshua-tree.jpg';
+import { travel_images } from './images.js';
 
 class Travel extends Component { 
-  render() {
 
-    const travel_images = [
-  
-        {
-          src: joshuatree,
-          desc: 'Beyond the Joshua Tree',
-          sub: 'Oil on Canvas - 40" x 30"',
-          key: 1
-        }
-    
-      ];
+  state = { loading: true };
+
+  componentDidMount() {
+    this.setState({ loading: false })
+  }
+
+  render() {
 
       const settings = {
         columnCount:{
@@ -25,20 +21,29 @@ class Travel extends Component {
         mode: 'dark'
       }
 
-    return (
+    if (this.state.loading) {
+        return (
+          <div className="loader-container">
+            <div className="segment">
+              <div className="ui active dimmer">
+                <div className="ui medium text loader">Loading</div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+      return (
         <div className="gallery-container">
           <div className="gallery">
-
-              <Lightroom 
-                images={travel_images}
-                settings={settings}
-              />
-
-          </div>
-      </div>
-    );
-  }
-};
+                <Lightroom
+                  images={travel_images}
+                  settings={settings}
+                />
+          </div> 
+        </div>
+      );
+    }
+  };
  
 export default Travel;
 

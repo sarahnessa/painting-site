@@ -19,8 +19,8 @@
 .env.production.local
 painting.code-workspace
 package-lock.json
-instagram.js
 /img
+/api
 yarn.lock
 
 npm-debug.log*

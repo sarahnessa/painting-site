@@ -14,7 +14,7 @@ class Contact extends Component {
       .get("/media", {
         params: {
           fields: "caption,id,media_url,timestamp,username",
-          access_token: ACCESS_TOKEN,
+          access_token: ACCESS_TOKEN
         },
       })
       .then((res) => {
@@ -26,58 +26,6 @@ class Contact extends Component {
   };
 
   render() {
-    const config = {
-      api: "api/contact/index.php",
-      title: "Contact Me",
-      successMessage:
-        "Thank you for contacting me. I'll get back to you shortly.",
-      errorMessage:
-        "Something went wrong while attempting to send your message. Please send an email to sarahnessaart@gmail.com.",
-      fields: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        msg: "",
-      },
-      fieldsConfig: [
-        {
-          id: 1,
-          label: "First Name",
-          fieldName: "firstName",
-          type: "text",
-          placeholder: "Your First Name",
-          isRequired: true,
-          fieldNameClass: "first-name-field",
-        },
-        {
-          id: 2,
-          label: "Last Name",
-          fieldName: "lastName",
-          type: "text",
-          placeholder: "Your Last Name",
-          isRequired: true,
-          fieldNameClass: "last-name-field",
-        },
-        {
-          id: 3,
-          label: "Email",
-          fieldName: "email",
-          type: "email",
-          placeholder: " Your Email",
-          isRequired: true,
-          fieldNameEmail: "email-field",
-        },
-        {
-          id: 4,
-          label: "Message",
-          fieldName: "msg",
-          type: "textarea",
-          placeholder: "Your message here.....",
-          isRequired: true,
-          fieldNameClass: "message-field",
-        },
-      ],
-    };
 
     const { play } = this.state.play;
 
@@ -97,7 +45,7 @@ class Contact extends Component {
 
     return (
       <div className="contact-container">
-        <Form config={config} />
+        <Form />
 
         <div className="instagram-container">
           {this.state.images.map((image) => {
