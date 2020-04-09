@@ -293,7 +293,7 @@ input[type=text],input[type=email], select, textarea {
     resize: vertical;
 }
 
-.button-container button {
+.btn-primary {
     background-color: #00CED1;
     color: white;
     padding: 12px 20px;

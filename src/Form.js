@@ -1,71 +1,51 @@
 import React, { Component } from 'react';
-import axios from "axios";
+import axios from 'axios';
 
-class Form extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      message: '',
-      email: '',
-      sent: false,
-      buttonText: 'Send Message'
-    };
-  }
-
-  resetForm = () => {
-    this.setState({
-      name: '',
-      message: '',
-      email: '',
-       buttonText: 'Message Sent'
-    })
-  } 
-
-  formSubmit = e => {
-    e.preventDefault();
-     this.setState({
-      buttonText: '...sending'
-    })
-
-    let data = {
-      name: this.state.name,
-      email: this.state.email,
-      message: this.state.message
+class ContactForm extends Component{
+  
+    handleSubmit(e){
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        axios({
+            method: "POST", 
+            url:"http://localhost:3002/send", 
+            data: {
+                name: name,   
+                email: email,  
+                messsage: message
+            }
+        }).then((response)=>{
+            if (response.data.msg === 'success'){
+                alert("Message Sent."); 
+                this.resetForm()
+            }else if(response.data.msg === 'fail'){
+                alert("Message failed to send.")
+            }
+        })
     }
 
-    axios.post('/api/form-server.js', data)
-    .then(res => {
-      this.setState({ sent: true }, this.resetForm())
-    })
-    .catch( () => {
-      console.log('Message not sent');
-    })
-  };
+    resetForm(){
+        document.querySelector('.contact-form').reset();
+    }
 
-  render() {
-    return (
-      <div className="contact-form">
-        <h2>Contact Me</h2>
-        <div>
-          <form className="contact-form" onSubmit={ (e) => this.formSubmit(e)}>
-            <label class="message" htmlFor="message-input">Your Message</label>
-            <textarea onChange={e => this.setState({ message: e.target.value})} name="message" class="message-input" type="text" placeholder="Please write your message here" value={this.state.message} required/>
+    render(){
+        return(
+            <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                <label htmlFor="name">Name</label>
+                <input type="text" className="form-control" id="name" />
 
-            <label class="message-name" htmlFor="message-name">Your Name</label>
-            <input onChange={e => this.setState({ name: e.target.value})} name="name" class="message-name" type="text" placeholder="Your Name" value={this.state.name}/>
+                <label htmlFor="email">Email address</label>
+                <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
 
-            <label class="message-email" htmlFor="message-email">Your Email</label>
-            <input onChange={e => this.setState({ email: e.target.value})} name="email" class="message-email" type="email" placeholder="your@email.com" required value={this.state.email} />
+                <label htmlFor="message">Message</label>
+                <textarea className="form-control" rows="5" id="message"></textarea>
+       
+                <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
+        )
+    }
+}
 
-            <div className="button-container">
-                <button type="submit" className="button button-primary">{ this.state.buttonText }</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    );
-   }
-  }
-
-export default Form;
+export default ContactForm; 
