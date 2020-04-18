@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class ContactForm extends Component{
-  
+class Form extends Component {
+
     handleSubmit(e){
         e.preventDefault();
         const name = document.getElementById('name').value;
@@ -17,11 +17,12 @@ class ContactForm extends Component{
                 messsage: message
             }
         }).then((response)=>{
-            if (response.data.msg === 'success'){
-                alert("Message Sent."); 
-                this.resetForm()
-            }else if(response.data.msg === 'fail'){
-                alert("Message failed to send.")
+            if (response.data.msg === 'success') {
+                alert('Message sent');
+                console.log(response.data.msg);
+                this.resetForm();
+            } else if (response.data.msg === 'fail') {
+                alert('Message failed. Please fill out all entries.')
             }
         })
     }
@@ -30,19 +31,19 @@ class ContactForm extends Component{
         document.querySelector('.contact-form').reset();
     }
 
-    render(){
+    render() {
         return(
             <div>
               <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                 <h2>Get In Touch</h2>
                 <label htmlFor="name">Name</label>
-                <input type="text" className="form-control" id="name" />
+                <input required type="text" className="form-control" id="name" />
 
                 <label htmlFor="email">Email address</label>
-                <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
+                <input required type="email" className="form-control" id="email" aria-describedby="emailHelp" />
 
                 <label htmlFor="message">Message</label>
-                <textarea className="form-control" rows="5" id="message" ></textarea>
+                <textarea required className="form-control" rows="5" id="message" ></textarea>
        
                 <button type="submit" className="btn btn-primary">Submit</button>
               </form>
@@ -51,4 +52,4 @@ class ContactForm extends Component{
     }
 }
 
-export default ContactForm; 
+export default Form; 
