@@ -70,8 +70,9 @@ ul {
 .app-menu {
   display: inline-block;
    float: right;
-   vertical-align: middle;
-   padding: 20px 0;
+   margin-top: -20px;
+   vertical-align: top;
+   padding: 0;
 }
 
 .app-menu ul, .painting-menu ul {
@@ -209,7 +210,7 @@ ul {
   cursor: pointer;
   position: fixed;
   right: 20px;
-  top: 40px;
+  top: 10px;
   z-index: 9999;
   background: #fff;
   padding: 10px;
@@ -337,7 +338,7 @@ input:focus, textarea:focus {
 }
 
 .instagram-image {
-  flex-basis: 30%;
+  flex-basis: 31%;
   margin: 10px;
   overflow: hidden;
 }
@@ -428,6 +429,10 @@ i.instagram {
   .painting-menu ul {
     text-align: center;
   }
+
+  .instagram-image {
+    flex-basis: 30%;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -451,6 +456,9 @@ i.instagram {
     margin: 0 auto;
     display: block;
   }
+  .instagram-image {
+    flex-basis: 100%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -465,10 +473,6 @@ i.instagram {
 
   .painting-menu li a {
     font-size: 0.9em;
-  }
-
-  .instagram-image {
-    flex-basis: 100%;
   }
 }
 

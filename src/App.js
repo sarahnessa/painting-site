@@ -17,6 +17,15 @@ import Menu from './Menu.js';
 
 class App extends Component {
 
+  hideBurger() {
+    let burger = document.querySelectorAll('.burger-menu');
+    let dimmer = document.querySelector('.styles_lightroom__1X2qE');
+
+    if(dimmer) {
+      burger.style.display = 'none !important';
+    }
+  }
+
   render() {
 
     return (

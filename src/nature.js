@@ -3,9 +3,7 @@ import Lightroom from 'react-lightbox-gallery';
 import { nature_images } from './images.js';
 
 class Nature extends Component {
-
-  state = { loading: false };
- 
+  
   render() {
       const settings = {
         columnCount:{
@@ -16,17 +14,6 @@ class Nature extends Component {
         mode: 'dark'
       }
     
-      if (this.state.loading) {
-        return (
-          <div className="loader-container">
-            <div className="segment">
-              <div className="ui active dimmer">
-                <div className="ui medium text loader">Loading</div>
-              </div>
-            </div>
-          </div>
-        );
-      }
       return (
         <div className="gallery-container">
           <div className="gallery">

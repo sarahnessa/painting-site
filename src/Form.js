@@ -32,18 +32,21 @@ class ContactForm extends Component{
 
     render(){
         return(
-            <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+            <div>
+              <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                <h2>Get In Touch</h2>
                 <label htmlFor="name">Name</label>
-                <input type="text" className="form-control" id="name" value="name" />
+                <input type="text" className="form-control" id="name" />
 
                 <label htmlFor="email">Email address</label>
-                <input type="email" className="form-control" id="email" value="email" aria-describedby="emailHelp" />
+                <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
 
                 <label htmlFor="message">Message</label>
-                <textarea className="form-control" rows="5" id="message" value="message"></textarea>
+                <textarea className="form-control" rows="5" id="message" ></textarea>
        
                 <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
+              </form>
+            </div>
         )
     }
 }
