@@ -18,11 +18,10 @@ class Form extends Component {
             }
         }).then((response)=>{
             if (response.data.msg === 'success') {
-                alert('Message sent');
-                console.log(response.data.msg);
+                alert('Message Sent.');
                 this.resetForm();
             } else if (response.data.msg === 'fail') {
-                alert('Message failed. Please fill out all entries.')
+                alert('Message failed to send. Please fill out all entries or email sarahnessaart@gmail.com.')
             }
         })
     }
