@@ -341,7 +341,6 @@ input:focus, textarea:focus {
   flex-basis: 31%;
   margin: 10px;
   overflow: hidden;
-  max-height: 340px;
 }
 
 .instagram-image .inner {

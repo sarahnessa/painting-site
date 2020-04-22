@@ -3,7 +3,6 @@ import Lightroom from 'react-lightbox-gallery';
 import { science_images } from './images.js';
 
 class Science extends Component {
-
   render() {
         
     const settings = {

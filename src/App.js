@@ -16,13 +16,18 @@ import Menu from './Menu.js';
 
 
 class App extends Component {
+  componentDidMount() {
+    this.hideBurger();
+  }
 
   hideBurger() {
-    let burger = document.querySelectorAll('.burger-menu');
-    let dimmer = document.querySelector('.styles_lightroom__1X2qE');
+    let burger = document.getElementsByClassName('burger-menu');
+    let dimmer = document.getElementsByClassName('styles_lightroom__1X2qE');
 
-    if(dimmer) {
-      burger.style.display = 'none !important';
+    if(dimmer !== undefined && burger !== undefined) {
+      for (let i=0; i<burger.length; i++) {
+        burger[i].style.display = 'none';
+      }
     }
   }
 
