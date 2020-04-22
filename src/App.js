@@ -16,23 +16,50 @@ import Menu from './Menu.js';
 
 
 class App extends Component {
-  componentDidMount() {
-    this.hideBurger();
+
+  constructor(props) {
+    super(props);
+
+    this.hideBurger = this.hideBurger.bind(this);
+    this.showBurger = this.showBurger.bind(this);
   }
 
+  componentDidMount() {
+    const paintingimg = document.getElementsByTagName('IMG');
+    const close = document.querySelector('.fa-times');
+    for(let i=0; i<paintingimg.length; i++) {
+      paintingimg[i].addEventListener('click', this.hideBurger);
+    }
+    close.addEventListener('click', this.showBurger);
+  }
+  
   hideBurger() {
-    let burger = document.getElementsByClassName('burger-menu');
-    let dimmer = document.getElementsByClassName('styles_lightroom__1X2qE');
+    const burger = document.getElementsByClassName('burger-menu');
+    for (let i=0; i<burger.length; i++) {
+        burger[i].style.display = 'none';
+    } 
+  }
 
-    if(dimmer !== undefined && burger !== undefined) {
+  showBurger() {
+    const burger = document.getElementsByClassName('burger-menu');
+    if(window.innerWidth !== undefined && window.innerHeight !== undefined) { 
+      var w = window.innerWidth;
+    } else {  
+      var w = document.documentElement.clientWidth;
+    }
+    if (w <= 800) {
+      for (let i=0; i<burger.length; i++) {
+        burger[i].style.display = 'inline-block';
+      } 
+    } else {
       for (let i=0; i<burger.length; i++) {
         burger[i].style.display = 'none';
-      }
+      } 
     }
   }
+  
 
   render() {
-
     return (
 
         <HashRouter>
