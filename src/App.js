@@ -20,8 +20,12 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.state = { width: '' };
+
     this.hideBurger = this.hideBurger.bind(this);
     this.showBurger = this.showBurger.bind(this);
+    this.updateWidth = this.updateWidth.bind(this);
+    this.hideBurgerOnResize = this.hideBurgerOnResize.bind(this);
   }
 
   componentDidMount() {
@@ -31,31 +35,51 @@ class App extends Component {
       paintingimg[i].addEventListener('click', this.hideBurger);
     }
     close.addEventListener('click', this.showBurger);
+    this.updateWidth();
+    window.addEventListener('resize', this.updateWidth);
+  }
+
+  componentWillUpdate() {
+    this.hideBurgerOnResize();
   }
   
   hideBurger() {
     const burger = document.getElementsByClassName('burger-menu');
+    
     for (let i=0; i<burger.length; i++) {
         burger[i].style.display = 'none';
     } 
   }
 
-  showBurger() {
-    const burger = document.getElementsByClassName('burger-menu');
-    if(window.innerWidth !== undefined && window.innerHeight !== undefined) { 
-      var w = window.innerWidth;
-    } else {  
-      var w = document.documentElement.clientWidth;
-    }
+  updateWidth() {
+    const w = window.innerWidth || document.documentElement.clientWidth;
     if (w <= 800) {
-      for (let i=0; i<burger.length; i++) {
-        burger[i].style.display = 'inline-block';
-      } 
-    } else {
+      this.setState({ width: 'mobile' });
+    } else if (w > 800) {
+      this.setState({ width: 'desktop' });
+    }
+  }
+
+  hideBurgerOnResize() {
+    const burger = document.getElementsByClassName('burger-menu');
+
+    if (this.state.width === 'desktop') {
       for (let i=0; i<burger.length; i++) {
         burger[i].style.display = 'none';
       } 
+    } else if (this.state.width === 'mobile') {
+      for (let i=0; i<burger.length; i++) {
+        burger[i].style.display = 'inline-block';
+      } 
     }
+  }
+
+  showBurger() {
+    const burger = document.getElementsByClassName('burger-menu');
+
+    for (let i=0; i<burger.length; i++) {
+      burger[i].style.display = 'inline-block';
+    } 
   }
   
 
