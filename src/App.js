@@ -34,7 +34,7 @@ class App extends Component {
     for(let i=0; i<paintingimg.length; i++) {
       paintingimg[i].addEventListener('click', this.hideBurger);
     }
-    close.addEventListener('click', this.showBurger);
+    if(close) { close.addEventListener('click', this.showBurger); }
     this.updateWidth();
     window.addEventListener('resize', this.updateWidth);
   }
