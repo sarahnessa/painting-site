@@ -23,9 +23,9 @@ class Navigation extends Component {
               
               <nav className="painting-menu">
                 <ul>
-                  <li><NavLink className="seriesLink" exact to='/'>Nature x Spirit</NavLink></li>
-                  <li><NavLink className="seriesLink" to='/science.js'>Under the Microscope</NavLink></li>
-                  <li><NavLink className="seriesLink" to='/travel.js'>Travel Gems</NavLink></li>
+                  <li><NavLink className="series-link" exact to='/'>Nature x Spirit</NavLink></li>
+                  <li><NavLink className="series-link" to='/science.js'>Under the Microscope</NavLink></li>
+                  <li><NavLink className="series-link" to='/travel.js'>Travel Gems</NavLink></li>
                 </ul>
               </nav>
 

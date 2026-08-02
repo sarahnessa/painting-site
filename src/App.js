@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   Route,
   HashRouter,
-  Switch
+  Routes
 } from "react-router-dom";
 import About from './About.js';
 import Contact from './Contact.js';
@@ -106,14 +106,14 @@ class App extends Component {
 
             <Navigation />
         
-            <Switch>
+            <Routes>
               <Route path='/About.js' component={About}/>
               <Route path='/Contact.js' component={Contact} />
               <Route exact path='/' component={Nature}/>
               <Route exact path='/nature.js' component={Nature}/>
               <Route path='/science.js' component={Science} />
               <Route path='/travel.js' component={Travel}/>
-            </Switch>
+            </Routes>
               
          </div>
 

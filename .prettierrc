@@ -1,0 +1,8 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  “editor.formatOnSave”: true,
+  “editor.codeActionsOnSave”: {
+    “source.fixAll.esLint: true
+  }
+}
